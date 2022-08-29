@@ -25,6 +25,20 @@ string[] CreateArray(int size)
     return array1;
 }
 
+string[] ChangeArray(string[] arr3, int counter)
+{
+    string[] Newarray1 = new string[counter];
+    int j = 0;
+    for (int i = 0; i < counter; i++)
+    {
+        if (arr3[i] != null)
+        {
+            Newarray1[j] = arr3[i];
+            j++;
+        }
+    }
+    return Newarray1;
+}
 
 string[] LengthOfArrayForThree(string[] arr)
 {
@@ -38,7 +52,8 @@ string[] LengthOfArrayForThree(string[] arr)
             count++;
         }
     }
-return Newarray;
+    string[] ArrayResultt = ChangeArray(Newarray, count);
+    return ArrayResultt;
 }
 
 void PrintArray(string[] array2)
