@@ -26,8 +26,20 @@ string[] CreateArray(int size)
 }
 
 
-
-
+string[] LengthOfArrayForThree(string[] arr)
+{
+    int count = 0;
+    string[] Newarray = new string[arr.Length];
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3)
+        {
+            Newarray[count] = arr[i];
+            count++;
+        }
+    }
+return Newarray;
+}
 
 void PrintArray(string[] array2)
 {
@@ -42,3 +54,7 @@ void PrintArray(string[] array2)
 string[] array = CreateArray(siezeOfArray);
 Console.WriteLine("Ваш исходный массив: ");
 PrintArray(array);
+Console.WriteLine();
+Console.WriteLine("Ваш новый массив: ");
+string[] arrayNew = LengthOfArrayForThree(array);
+PrintArray(arrayNew);
