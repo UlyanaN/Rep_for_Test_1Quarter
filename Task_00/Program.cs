@@ -19,7 +19,7 @@ string[] CreateArray(int size)
     for (int i = 0; i < size; i++)
     {
         Console.WriteLine("Введите элемент массива: ");
-        string element = Console.ReadLine(); //записываем в массив каждый элемент
+        string element = Console.ReadLine();
         array1[i] = element;
     }
     return array1;
@@ -51,7 +51,6 @@ string[] LengthOfArrayForThree(string[] arr)
             Newarray[count] = arr[i];
             count++;
         }
-        else return Newarray;
     }
     string[] ArrayResultt = ChangeArray(Newarray, count);
     return ArrayResultt;
@@ -62,7 +61,7 @@ void PrintArray(string[] array2)
     for (int i = 0; i < array2.Length; i++)
     {
         if (i == 0) Console.Write("[");
-        if (i < array2.Length - 1) Console.Write(array2[i] + "  ");
+        if (i < array2.Length - 1) Console.Write(array2[i] + " ");
         else Console.Write(array2[i] + "]");
     }
 }
