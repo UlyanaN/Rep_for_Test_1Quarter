@@ -15,14 +15,30 @@ int siezeOfArray = Convert.ToInt32(Console.ReadLine());
 
 string[] CreateArray(int size)
 {
-    string[] arrayM = new string[size];
+    string[] array1 = new string[size];
     for (int i = 0; i < size; i++)
     {
         Console.WriteLine("Введите элемент массива: ");
         string element = Console.ReadLine(); //записываем в массив каждый элемент
-        arrayM[i] = element;
+        array1[i] = element;
     }
-    return arrayM;
+    return array1;
 }
 
 
+
+
+
+void PrintArray(string[] array2)
+{
+    for (int i = 0; i < array2.Length; i++)
+    {
+        if (i == 0) Console.Write("[");
+        if (i < array2.Length - 1) Console.Write(array2[i] + " , ");
+        else Console.Write(array2[i] + "]");
+    }
+}
+
+string[] array = CreateArray(siezeOfArray);
+Console.WriteLine("Ваш исходный массив: ");
+PrintArray(array);
