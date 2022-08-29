@@ -51,6 +51,7 @@ string[] LengthOfArrayForThree(string[] arr)
             Newarray[count] = arr[i];
             count++;
         }
+        else return Newarray;
     }
     string[] ArrayResultt = ChangeArray(Newarray, count);
     return ArrayResultt;
@@ -61,7 +62,7 @@ void PrintArray(string[] array2)
     for (int i = 0; i < array2.Length; i++)
     {
         if (i == 0) Console.Write("[");
-        if (i < array2.Length - 1) Console.Write(array2[i] + " , ");
+        if (i < array2.Length - 1) Console.Write(array2[i] + "  ");
         else Console.Write(array2[i] + "]");
     }
 }
